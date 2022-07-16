@@ -1,56 +1,50 @@
-/* This makes your styling easier as it takes care of the default styling*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
- body{
-    /* background-color: rgba(red, green, blue, alpha); */
-    /* This is how to properly use rgba */
-    background-color:rgba(55, 228, 214, 0.315);
-    
-}
-.container{
-    /* background-color: rgba(red, green, blue, alpha); */
-    background-color:rgba(228, 219, 55, 0.964);
-}
-
-
-.grid-container{
+body{
+    background-color: rgba(24,222,314,0.222);
     display: grid;
-    gap: 5px;
-   /* grid-template-areas: 'item1 item1 item1 item2 item2'
-    'item3 item3 item4 item4 item4'
-    'item3 item3 item5, item5 item5'; */
-
-    /* I would write these this way */
-    grid-template-areas: 
-    'item1 item1 item1 item2 item2'
-    'item3 item3 item4 item4 item4'
-    'item3 item3 item5, item5 item5'
-    ;
+    justify-items: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.grid-container{
+display: grid;
+grid-gap: 10px;
+grid-auto-rows: minmax(100px, auto);
+min-height: 60vh;
+padding: 20px;
 }
 
 .item1{
-    grid-area: item1;
     background-color: aqua;
+    grid-column:1/20;
+    grid-row:1;
 }
-.item2{
-   grid-area: item2;
-   background-color: aquamarine;   
-}
-.item3{
-    grid-area: item3;
-    background-color: bisque;
-}
-.item4{
-   grid-area: item4;
-   background-color: beige;
-}
-.item5{
-   grid-area: item5;
-   background-color: brown;
-} 
 
-/* okay... so, with everything working fine now you can finish the task. */
+.item2{
+   background-color: rgb(165, 127, 255);
+   grid-column: 20/40;
+   grid-row: 1;  
+}
+
+.item3{
+    background-color: bisque;
+    grid-column: 1/15;
+    grid-row: 2/4; ;
+}
+
+.item4{
+   background-color: beige;
+   grid-column: 15/40;
+   grid-row:2;
+
+}
+
+.item5{
+   background-color: beige;
+   grid-column: 15/40;
+   grid-row: 3;
+}
